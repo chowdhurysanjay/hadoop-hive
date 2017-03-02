@@ -1,0 +1,5 @@
+"category_id","category_parent","category_description","category_rollup"
+"ACTUAL",\N,"Current Year's Actuals",\N
+"ADJUSTMENT",\N,"Adjustment for Budget input",\N
+"BUDGET",\N,"Current Year's Budget",\N
+"FORECAST",\N,"Forecast",\N
