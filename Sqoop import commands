@@ -1,0 +1,23 @@
+#Simple Sqoop import command
+
+sqoop import --connect "jdbc:mysql://localhost:3306/demo" --username root --table employee_info --target-dir /user/hdfs/sqoop_data --driver com.mysql.jdbc.Driver
+----------------------------
+#Sqoop import with where clause
+
+sqoop import --connect "jdbc:mysql://localhost:3306/demo" --username root --table employee_info --m 1 --where "salary = 2000" --target-dir /user/hdfs/wherequery --driver com.mysql.jdbc.Driver
+----------------------------
+#Sqoop incremental command
+
+sqoop import --connect "jdbc:mysql://localhost:3306/demo" --username root --table employee_info --m 1 --incremental append --check-column id --last-value 7 --target-dir /user/hdfs/wherequery --driver com.mysql.jdbc.Driver
+----------------------------
+#Sqoop import all tables from a database
+
+sqoop import-all-tables --connect jdbc:mysql://localhost:3306/demo --username=root --m=1 --warehouse-dir=/user/hive/warehouse/employee.db --driver com.mysql.jdbc.Driver
+----------------------------
+#Sqoop import specific table and upload into Hive
+
+sqoop create-hive-table --connect jdbc:mysql://localhost:3306/demo --table employee_info --username=root --driver com.mysql.jdbc.Driver
+----------------------------
+#Sqoop import all tables and upload into Hive
+
+sqoop import-all-tables --connect jdbc:mysql://localhost:3306/demo --username=root --m=1 --hive-import --warehouse-dir=/apps/hive/warehouse/ --driver com.mysql.jdbc.Driver
