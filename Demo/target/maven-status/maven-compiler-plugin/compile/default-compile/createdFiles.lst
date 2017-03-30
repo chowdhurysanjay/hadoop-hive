@@ -1,6 +1,0 @@
-com\happiestminds\demo\SparkSQL.class
-com\happiestminds\demo\SimpleHbaseLoader.class
-com\happiestminds\demo\HBaseDataLoader$1.class
-com\happiestminds\demo\HiveWithSpark.class
-com\happiestminds\demo\HBaseDataLoader.class
-com\happiestminds\demo\WordCount.class
